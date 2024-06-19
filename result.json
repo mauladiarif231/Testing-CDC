@@ -1,0 +1,23 @@
+{
+    "before": null,
+    "after": "{\"_id\": {\"$oid\": \"664b0c652f3832bab1ddb0c3\"},\"name\": \"Joh\",\"email\": \"john@example.com\",\"phone\": \"+1234567890\",\"address\": {\"street\": \"123 Main St\",\"city\": \"Anytown\",\"state\": \"NY\",\"zipcode\": \"12345\",\"country\": \"USA\"},\"orders\": [{\"order_date\": {\"$date\": 1658478600000},\"total_amount\": 150.75,\"status\": \"Shipped\"},{\"order_date\": {\"$date\": 1660560300000},\"total_amount\": 75.5,\"status\": \"Pending\"}]}",
+    "updateDescription": null,
+    "source": {
+        "version": "2.3.4.Final",
+        "connector": "mongodb",
+        "name": "tutorial",
+        "ts_ms": 1716194405000,
+        "snapshot": "false",
+        "db": "inventory",
+        "sequence": null,
+        "rs": "rs0",
+        "collection": "customers",
+        "ord": 1,
+        "lsid": null,
+        "txnNumber": null,
+        "wallTime": null
+    },
+    "op": "c",
+    "ts_ms": 1716194405765,
+    "transaction": null
+}

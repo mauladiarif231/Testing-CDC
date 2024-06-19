@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  mongodb:
+    image: quay.io/debezium/example-mongodb:${DEBEZIUM_VERSION}
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGODB_USER=mongoadmin
+      - MONGODB_PASSWORD=mongoadmin
+  debezium-server-mongodb:
+    image: quay.io/debezium/server:${DEBEZIUM_VERSION}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: debezium-server-mongodb
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /tmp/credentials/service-account.json
+    ports:
+      - "8080:8080"
+    volumes:
+      - D:\PT Telkom Indonesia\Testing\CDC\test\service-account.json:/tmp/credentials/service-account.json
+      - ./config-mongodb:/debezium/conf
+    depends_on:
+      - mongodb
